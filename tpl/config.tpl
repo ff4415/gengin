@@ -16,7 +16,7 @@ type Log struct {
     Level string
 }
 
-type Mysql struct{
+type Postgres struct{
     Host string
     Port int
     User string

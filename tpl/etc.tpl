@@ -11,7 +11,7 @@ Log:
   Dir:
   Level:
 
-Mysql:
+Postgres:
   Host:
   Port:
   User:
