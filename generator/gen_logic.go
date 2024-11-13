@@ -51,6 +51,7 @@ func genLogicByRoute(group spec.Group, route spec.Route) error {
 		WithData(map[string]any{
 			"rootPkg":           prepare.RootPkg,
 			"pkgName":           logicBase,
+			"svcName":           cases.Title(language.English, cases.NoLower).String(logicBase),
 			"comment":           parseComment(route),
 			"logicName":         cases.Title(language.English, cases.NoLower).String(route.Handler),
 			"requestType":       cases.Title(language.English, cases.NoLower).String(route.RequestTypeName()),

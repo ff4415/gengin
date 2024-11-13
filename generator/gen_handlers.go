@@ -56,6 +56,7 @@ func genHandler(group spec.Group, route spec.Route) error {
 		WithData(map[string]any{
 			"rootPkg":      prepare.RootPkg,
 			"pkgName":      handleBase,
+			"svcName":      cases.Title(language.English, cases.NoLower).String(handleBase),
 			"logicPkg":     logicPkg,
 			"logicBase":    logicBase,
 			"comment":      parseComment(route),

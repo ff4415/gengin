@@ -15,6 +15,6 @@ func {{.handlerName}}Handle(c *gin.Context) {
     var req types.{{.requestType}}
     {{.parseRequest}}
     {{- end -}}
-    {{if .hasResp}}resp, {{end}}err := {{.logicBase}}.{{.handlerName}}(svc.NewServiceContext(c), {{if .hasReq}}&req{{end}})
+    {{if .hasResp}}resp, {{end}}err := {{.logicBase}}.{{.handlerName}}(svc.New{{.svcName}}ServiceContext(c), {{if .hasReq}}&req{{end}})
     response.HandleResponse(c, {{if .hasResp}}resp{{else}}nil{{end}}, err)
 }
